@@ -50,13 +50,6 @@ body {
   gap: 1rem;
   flex-wrap: wrap;
   justify-content: center;
-  text-align: center;
-}
-
-/* Fix: center and align elements in search card */
-.card.search-card {
-  flex-direction: column;
-  align-items: center;
 }
 
 .card h2 {
@@ -69,7 +62,20 @@ body {
   color: #333;
 }
 
-/* Fix: ensure search bar stays within card */
+/* Search Card - center content */
+.card.search-card {
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.card.search-card h2 {
+  margin-bottom: 1rem;
+  color: #b30000;
+  font-size: 1.8rem;
+}
+
 .search-input {
   padding: 0.8rem 1rem;
   font-size: 1.2rem;
@@ -79,6 +85,7 @@ body {
   max-width: 400px;
   font-family: 'Baloo 2', cursive;
   margin-top: 0.5rem;
+  text-align: center;
 }
 
 .results {
