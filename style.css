@@ -107,3 +107,34 @@ body {
   border-radius: 0.3rem;
   box-shadow: 1px 1px 4px rgba(0, 0, 0, 0.15);
 }
+
+/* Responsive styles for phones */
+@media (max-width: 600px) {
+  .dashboard {
+    padding-top: 3rem;
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+
+  .card,
+  .results {
+    width: 100%;
+    max-width: 100%;
+    min-width: auto;
+    box-sizing: border-box;
+    padding: 1.5rem;
+  }
+
+  .greeting {
+    font-size: 10vw; /* smaller font on phone */
+    padding: 0.5rem;
+  }
+
+  .search-input {
+    font-size: 1rem;
+  }
+
+  .result-card {
+    padding: 0.8rem;
+  }
+}
