@@ -45,6 +45,11 @@ body {
   width: 500px;
   max-width: 100%;
   overflow-wrap: break-word;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  flex-wrap: wrap;
+  justify-content: center;
 }
 
 .card h2 {
@@ -91,17 +96,24 @@ body {
   color: #b30000;
 }
 
-#weather {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 0.5rem;
-  font-size: 2rem;
-  color: #333;
-  flex-wrap: wrap;
-  word-break: break-word;
+#weather-icon {
+  width: 48px;
+  height: 48px;
 }
 
+#weather-temp {
+  font-size: 2.5rem;
+  font-weight: bold;
+  color: #b30000;
+}
+
+#weather-desc,
+#time-est {
+  font-size: 1.2rem;
+  color: #333;
+}
+
+/* PS message styling */
 .ps-message {
   position: fixed;
   top: 50px;
@@ -120,7 +132,7 @@ body {
   box-shadow: 1px 1px 4px rgba(0, 0, 0, 0.15);
 }
 
-/* Responsive styles for screens smaller than 520px */
+/* Responsive styles for phones and small tablets */
 @media (max-width: 520px) {
   .card,
   .search-input,
