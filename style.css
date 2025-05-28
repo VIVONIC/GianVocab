@@ -1,3 +1,10 @@
+/* Universal box-sizing */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
 body {
   margin: 0;
   padding: 0;
@@ -6,7 +13,7 @@ body {
   display: flex;
   justify-content: center;
   align-items: flex-start;
-  height: 100vh;
+  min-height: 100vh;
   text-align: center;
 }
 
@@ -16,11 +23,10 @@ body {
   gap: 2rem;
   align-items: center;
   padding-top: 3rem;
-  padding-left: 1rem;
-  padding-right: 1rem;
-  box-sizing: border-box;
   width: 100%;
   max-width: 600px;
+  padding-left: 1rem;
+  padding-right: 1rem;
 }
 
 .greeting {
@@ -36,10 +42,8 @@ body {
   padding: 2rem;
   border-radius: 1rem;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-  width: 100%;
-  max-width: 500px;
-  min-width: auto;
-  box-sizing: border-box;
+  width: 500px;
+  max-width: 100%;
   overflow-wrap: break-word;
 }
 
@@ -58,9 +62,8 @@ body {
   font-size: 1.2rem;
   border: 2px solid #b30000;
   border-radius: 0.5rem;
-  width: 100%;
-  max-width: 500px;
-  box-sizing: border-box;
+  width: 500px;
+  max-width: 100%;
   font-family: 'Baloo 2', cursive;
 }
 
@@ -69,10 +72,8 @@ body {
   flex-direction: column;
   gap: 1rem;
   margin-top: 1rem;
-  width: 100%;
-  max-width: 500px;
-  min-width: auto;
-  box-sizing: border-box;
+  width: 500px;
+  max-width: 100%;
   overflow-y: auto;
 }
 
@@ -119,17 +120,24 @@ body {
   box-shadow: 1px 1px 4px rgba(0, 0, 0, 0.15);
 }
 
-/* Responsive styles for phones */
-@media (max-width: 600px) {
-  .greeting {
-    font-size: 10vw; /* smaller font on phone */
+/* Responsive styles for screens smaller than 520px */
+@media (max-width: 520px) {
+  .card,
+  .search-input,
+  .results {
+    width: 90vw;
+    max-width: 90vw;
   }
 
-  .search-input {
-    font-size: 1rem;
+  .greeting {
+    font-size: 10vw;
   }
 
   .result-card {
     padding: 0.8rem;
+  }
+
+  .search-input {
+    font-size: 1rem;
   }
 }
